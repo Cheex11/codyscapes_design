@@ -1,0 +1,36 @@
+
+<!--<link rel="stylesheet" type="text/css" href="css/styles.css">-->
+
+
+<body>
+	<style>
+		html, body { display: block; width: 100%; height: 100%; margin: 0px; }
+		.wrapper { position: relative; display: block; width: 100%; height: 100%; overflow: hidden; background-color: red; }
+		.quadrants-container { position: absolute; display: inline-block; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(45deg); height: 4000px; width: 4000px; font-size: 0px; white-space: nowrap; }
+		.quadrant { position: relative; display: inline-block; width: 2000px; height: 2000px; overflow: hidden; }
+		.quadrant img { position: absolute; max-width: 1000px; transform: rotate(-45deg); z-index: 5; }
+		.q-1 { background-color: blue; }
+		.q-2 { background-color: orange; }
+		.q-3 { background-color: yellow; }
+		.q-4 { background-color: blue; }
+		.q-1 img { bottom:-200px; right:-200px; }
+		.q-2 img { bottom:-250px; left:-250px; }
+		.q-3 img { top:-250px; right:-250px; }
+		.q-4 img { top:-200px; left:-200px; }
+		.quadrant-hover { position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.6); width: 100%; height: 100%; z-index: 10; transition: all 1s linear; }
+		.q-1:hover .quadrant-hover { top: -50%; left: -50%; opacity: 0; }
+		.q-2:hover .quadrant-hover { top: -50%; left: 50%; opacity: 0; }
+		.q-3:hover .quadrant-hover { top: 50%; left: -50%; opacity: 0; }
+		.q-4:hover .quadrant-hover { top: 50%; left: 50%; opacity: 0; }
+	</style>
+
+	<div class='wrapper'>
+		<div class="quadrants-container">
+			<div class="quadrant q-1"><div class="quadrant-hover"></div><img src="watch.jpg"/></div>
+			<div class="quadrant q-2"><div class="quadrant-hover"></div><img src="watch.jpg"/></div><br/>
+			<div class="quadrant q-3"><div class="quadrant-hover"></div><img src="watch.jpg"/></div>
+			<div class="quadrant q-4"><div class="quadrant-hover"></div><img src="watch.jpg"/></div>
+		</div>
+	</div>
+
+</body>
